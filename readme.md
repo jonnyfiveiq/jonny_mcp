@@ -81,14 +81,9 @@ Use the aap server and run ping_aap.
 or simply:
 ping_aap
 
-List available tools
-
-What tools does the aap server provide?
-
-Run a job (after adding more tools)
-
-Launch job template 42 in AAP.
-
-Check jobs
-
-List the most recent jobs in Ansible Automation Platform.
+- List available tools
+- What tools does the aap server provide?
+- Run a job (after adding more tools)
+- Launch job template 42 in AAP.
+- Check jobs
+- List the most recent jobs in Ansible Automation Platform.
