@@ -1,4 +1,4 @@
-# Ansible Automation Platform MCP Server
+# UNOFFICIAL Ansible Automation Platform MCP Server
 
 This project provides a **Model Context Protocol (MCP) server** for interacting with **Ansible Automation Platform (AAP)** through Claude or other MCP-aware clients.  
 It allows you to chat with Claude and run AAP operations (e.g. ping the controller, list jobs, create/run job templates).
