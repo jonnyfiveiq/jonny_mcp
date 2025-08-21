@@ -31,3 +31,64 @@ It allows you to chat with Claude and run AAP operations (e.g. ping the controll
    ```bash
    git clone https://github.com/yourname/aap-mcp-server.git
    cd aap-mcp-server
+
+
+2. Create a virtual environment and install dependencies
+
+uv venv
+source .venv/bin/activate
+uv pip install -r requirements.txt
+
+3. Create .env file
+
+AAP_BASE_URL=https://192.168.0.174
+AAP_USERNAME=admin
+AAP_PASSWORD=********
+AAP_VERIFY_SSL=true
+AAP_TIMEOUT_SEC=30
+
+4. Run in MCP Inspector (for debugging)
+
+mcp dev server.py
+
+5. Integrate with Claude
+Open the Claude Desktop App.
+Go to Settings → Developer → Local MCP servers.
+Click Edit Config and add your server:
+
+{
+  "aap": {
+    "command": "uv",
+    "args": [
+      "run",
+      "server.py"
+    ],
+    "env": {
+      "AAP_BASE_URL": "https://192.168.0.174",
+      "AAP_USERNAME": "admin",
+      "AAP_PASSWORD": "********"
+    }
+  }
+}
+
+
+## Using the Server in Claude
+Once connected, you can ask Claude to use your MCP server directly in chat. Examples:
+
+Ping AAP
+
+Use the aap server and run ping_aap. 
+or simply:
+ping_aap
+
+List available tools
+
+What tools does the aap server provide?
+
+Run a job (after adding more tools)
+
+Launch job template 42 in AAP.
+
+Check jobs
+
+List the most recent jobs in Ansible Automation Platform.
